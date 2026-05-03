@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: pfQuest Targeting Macro
+## Notes: Auto-generates a /targetexact macro from active kill objectives
+## Version: 1.0
+## SavedVariables: pfQuestTargetingDB
+
+pfQuestTargeting.lua
