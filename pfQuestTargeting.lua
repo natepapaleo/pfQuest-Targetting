@@ -848,6 +848,18 @@ FullUpdate = function()
     activeNames = GetKillObjectiveNames()
     wipe(nameSet)
     for _, name in ipairs(activeNames) do nameSet[name] = true end
+    -- Clear marks on mobs that just left the list
+    if GetSetting("autoMark") and not InCombatLockdown() then
+        for name, unitToken in pairs(nearbyUnits) do
+            if not nameSet[name] then
+                local want = GetSetting("markIndex")
+                if GetRaidTargetIndex(unitToken) == want then
+                    pcall(SetRaidTarget, unitToken, 0)
+                end
+            end
+        end
+    end
+
     for name in pairs(nearbyUnits) do
         if not nameSet[name] then nearbyUnits[name] = nil end
     end
