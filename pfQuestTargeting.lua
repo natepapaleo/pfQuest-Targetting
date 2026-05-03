@@ -701,7 +701,7 @@ local function CreateMinimapButton()
     minimapBtn = CreateFrame("Button", "pfQTMinimapButton", Minimap)
     minimapBtn:SetSize(20, 20)
     minimapBtn:SetFrameLevel(Minimap:GetFrameLevel() + 5)
-    minimapBtn:RegisterForClicks("AnyUp")
+    minimapBtn:RegisterForClicks("LeftButtonUp")
     minimapBtn:RegisterForDrag("LeftButton")
     minimapBtn:SetMovable(true)
 
@@ -741,23 +741,16 @@ local function CreateMinimapButton()
     end)
 
     minimapBtn:SetScript("OnClick", function(self, btn)
-        if btn == "RightButton" then
-            SetSetting("minimapButton", false)
-            minimapBtn:Hide()
-            print("|cFF00FF00pfQuestTargeting:|r Minimap button hidden. Type |cFFFFD700/pfqt options|r to re-enable.")
-        else
-            if targetFrame:IsShown() then targetFrame:Hide()
-            elseif ShouldShowFrame() then targetFrame:Show() end
-        end
+        if targetFrame:IsShown() then targetFrame:Hide()
+        elseif ShouldShowFrame() then targetFrame:Show() end
     end)
 
     minimapBtn:SetScript("OnEnter", function(self)
         GameTooltip:SetOwner(self, "ANCHOR_LEFT")
         GameTooltip:ClearLines()
         GameTooltip:AddLine("pfQuest Targeting", 1, 0.82, 0)
-        GameTooltip:AddLine("Left-click: toggle window",   0.7, 0.7, 0.7)
-        GameTooltip:AddLine("Right-click: hide button",    0.7, 0.7, 0.7)
-        GameTooltip:AddLine("Drag: reposition",            0.7, 0.7, 0.7)
+        GameTooltip:AddLine("Click: toggle window",   0.7, 0.7, 0.7)
+        GameTooltip:AddLine("Drag: reposition",       0.7, 0.7, 0.7)
         GameTooltip:Show()
     end)
     minimapBtn:SetScript("OnLeave", function() GameTooltip:Hide() end)
