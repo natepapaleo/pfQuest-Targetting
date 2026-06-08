@@ -1,6 +1,6 @@
 # pfQuest Targeting
 
-A companion addon for [pfQuest](https://github.com/shagu/pfQuest) that turns your active kill objectives into a live targeting panel. Instead of hunting through your quest log, every mob you need to kill appears as a clickable button — click to target instantly.
+A companion addon for [pfQuest](https://github.com/shagu/pfQuest) that turns your active kill objectives into a live targeting panel. Instead of hunting through your quest log, every mob you need to kill appears as a clickable button, click to target instantly.
 
 ## Features
 
@@ -10,7 +10,7 @@ A companion addon for [pfQuest](https://github.com/shagu/pfQuest) that turns you
 - Click any button to target that mob directly
 - Shows a live portrait when the mob is on your screen (nameplate range)
 - Resizes dynamically as objectives are completed or added
-- Draggable and lockable — saves position across sessions
+- Draggable and lockable, saves position across sessions
 
 ### Auto-Mark
 - Automatically applies a raid marker to quest mobs when they appear on your nameplate, when you target them, or when you mouseover them
@@ -21,7 +21,7 @@ A companion addon for [pfQuest](https://github.com/shagu/pfQuest) that turns you
 - Reads pfQuest's item database to resolve which mobs drop required items, so item collection quests show up in the panel alongside kill quests
 
 ### Macro Integration
-- Maintains a macro (`pfQTarget`) with `/targetexact` lines for every active mob — drag it to your bar for one-click cycling through targets
+- Maintains a macro (`pfQTarget`) with `/targetexact` lines for every active mob, drag it to your bar for one-click cycling through targets
 
 ### Sound Alert
 - Plays a sound when a quest mob enters nameplate range (2-second cooldown to prevent spam)
@@ -63,8 +63,8 @@ Open with `/pfqt options` or click the gear icon on the panel.
 
 ## Requirements
 
-- [pfQuest](https://github.com/shagu/pfQuest) (or a compatible fork with pfDB) — used for mob name lookups and drop quest resolution. The target panel still works without pfQuest but drop quest support will be unavailable.
+- [pfQuest](https://github.com/shagu/pfQuest) (or a compatible fork with pfDB), used for mob name lookups and drop quest resolution. The target panel still works without pfQuest but drop quest support will be unavailable.
 
 ## Compatibility
 
-WoW WotLK 3.3.5 — tested on [Ascension](https://ascension.gg/) Epoch.
+WoW WotLK 3.3.5 tested on [Ascension](https://ascension.gg/) Epoch.
